@@ -1,0 +1,68 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-05T06:31:25.846Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3158000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.Hook.openBrowser()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "As a user i can enter values in Gerkin syntax to use in the stepDef",
+        "description": "",
+        "id": "signup;as-a-user-i-can-enter-values-in-gerkin-syntax-to-use-in-the-stepdef",
+        "after": [
+          {
+            "result": {
+              "duration": 1115000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am at talenttek home page",
+            "match": {
+              "location": "StepDefinition.login_steps.iAmAtTalenttekHomePage()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "signup",
+    "description": "",
+    "id": "signup",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/Signup.feature",
+    "tags": []
+  }
+]
