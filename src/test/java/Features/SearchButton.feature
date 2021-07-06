@@ -51,7 +51,7 @@ Feature: SearchButton
     And Click on filter option from the header and add number of bed,bedroom,bathroom,Amenities(wifi,kitchen) and click on show stays link
     And Click on price button
     And Choose the min and max price using the sliders
-    And Input the min/max price in the following field
+    And Input the min&max price in the following field
     And Click on save option
     And Select a stays and store the stays title globally
     And Verify that user land in right page
