@@ -36,7 +36,7 @@ public class Hook extends Config {
         driver=initDriver(browserType);
         switch (baseURL){
             case "qa":
-                url="http://qa.taltektc.com/home";
+                url="https://www.airbnb.com/";
                 break;
             case "stage":
                 url="http://stage.taltektc.com/home";
@@ -65,7 +65,7 @@ public class Hook extends Config {
                 System.out.println(e);
             }
 
-            driver.quit();
+//            driver.quit();
     }
 
 
