@@ -1,5 +1,3 @@
-PageObject\Signup_pageObject.class
-StepDefinition\login_steps.class
 Base\Config.class
 Base\Test_Data.class
 Test_Runner.class

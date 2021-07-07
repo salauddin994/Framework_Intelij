@@ -1,37 +1,42 @@
 package StepDefinition;
 
+import Base.Config;
+import Base.Test_Data;
+import PageObject.SearchButton_pageObject;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
+import org.testng.Assert;
 
-public class SearchButton_steps {
+
+public class SearchButton_steps extends Config {
+
+    SearchButton_pageObject srch =new SearchButton_pageObject(driver);
     //Scenario 01>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    Faker faker =new Faker();
+
     @Given("I am at airbnb home page")
     public void iAmAtAirbnbHomePage() {
+        Assert.assertEquals(driver.getTitle(), Test_Data.homePageTitle);
         
     }
-
-    @And("Scroll down in home page")
-    public void scrollDownInHomePage() {
-        
-    }
-
-    @And("Click on search button from the header")
-    public void clickOnSearchButtonFromTheHeader() {
-    }
-
 
     @And("Click on location box and verify the place holder name")
-    public void clickOnLocationBoxAndVerifyThePlaceHolderName() {
+    public void clickOnLocationBoxAndVerifyThePlaceHolderName()  {
+
+        Assert.assertEquals(srch.setLocation.getAttribute("placeholder"),Test_Data.expPlaceholder_Location);
 
     }
 
     @And("Input the location in location box")
     public void inputTheLocationInLocationBox() {
-
+        srch.setLocation.sendKeys(Test_Data.location);
     }
 
     @And("Click on check in box and verify the place holder name")
     public void clickOnCheckInBoxAndVerifyThePlaceHolderName() {
-
+        Assert.assertEquals(srch.selectCheckIn.getText(),Test_Data.expPlaceholder_CheckIn_Checkout);
+        srch.selectCheckIn.click();
     }
 
     @Then("Select the check in date from the calender")
@@ -120,6 +125,14 @@ public class SearchButton_steps {
 
 
     //Scenario 02>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @And("Scroll down in home page")
+    public void scrollDownInHomePage() {
+
+    }
+
+    @And("Click on search button from the header")
+    public void clickOnSearchButtonFromTheHeader() {
+    }
 
     @Then("Click on i'm flexible option and Click on weekend option and select the month")
     public void clickOnIMFlexibleOptionAndClickOnWeekendOptionAndSelectTheMonth() {
@@ -160,4 +173,6 @@ public class SearchButton_steps {
     @When("Click on request to book option")
     public void clickOnRequestToBookOption() {
     }
+
+
 }

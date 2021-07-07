@@ -4,8 +4,6 @@ Feature: SearchButton
   and also filterd wih bed,bedroom and bathroom then book a reservation
 
     Given I am at airbnb home page
-    And Scroll down in home page
-    And Click on search button from the header
     And Click on location box and verify the place holder name
     And Input the location in location box
     And Click on check in box and verify the place holder name
@@ -69,4 +67,4 @@ Feature: SearchButton
 
 
 
-  Scenario: verify that user should not able to select check out date before check in date
+#  Scenario: verify that user should not able to select check out date before check in date
